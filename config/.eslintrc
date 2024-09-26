@@ -1,0 +1,34 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["@typescript-eslint", "prettier", "jsdoc", "@typescript-eslint/tslint"],
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+    "env": {
+        "browser": true,
+        "jest": true,
+        "jasmine": true
+    },
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "no-console": "warn",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            {
+                "allowedNames": ["ignoredFunctionName", "ignoredMethodName"]
+            }
+        ],
+        "jsdoc/require-jsdoc": [
+            "warn",
+            { "contexts": ["TSInterfaceDeclaration", "TSTypeAliasDeclaration", "TSEnumDeclaration"] }
+        ]
+    }
+}

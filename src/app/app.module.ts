@@ -6,6 +6,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DateAdapter, MAT_DATE_LOCALE, NativeDateAdapter } from '@angular/material/core';
+import { MainPageComponent } from './main-page/main-page.component';
+import { SectionComponent } from './main-page/section/section.component';
 
 /**
  * AoT requires an exported function for factories.
@@ -15,7 +17,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 }
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, MainPageComponent, SectionComponent],
     imports: [
         BrowserModule,
         HttpClientModule,

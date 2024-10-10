@@ -3,12 +3,33 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
-    #welcome {
-        background-color: aqua;
+    app-section div {
+        width: 100%;
+        height: 100%;
     }
+}
 
-    #countdown {
-        background-color: blueviolet;
-    }
+/* Scrollbar global style */
+
+/* width */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

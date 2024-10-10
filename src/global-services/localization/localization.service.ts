@@ -1,5 +1,4 @@
 import { Injectable, OnDestroy } from '@angular/core';
-import { DateAdapter } from '@angular/material/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ILocalStorageLocalizationSettings } from './types';
 
@@ -11,7 +10,7 @@ import { ILocalStorageLocalizationSettings } from './types';
     providedIn: 'root'
 })
 export class LocalizationService implements OnDestroy {
-    constructor(private readonly translateService: TranslateService, private readonly dateAdapter: DateAdapter<Date>) {
+    constructor(private readonly translateService: TranslateService) {
         this.onStorageChange = this.onStorageChange.bind(this);
         this.listenToChange();
     }

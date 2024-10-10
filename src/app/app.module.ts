@@ -5,9 +5,15 @@ import { LocalizationService } from 'src/global-services/localization/localizati
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { DateAdapter, MAT_DATE_LOCALE, NativeDateAdapter } from '@angular/material/core';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SectionComponent } from './main-page/section/section.component';
+import { ApartmentsComponent } from './main-page/pages/apartments/apartments.component';
+import { FeedbackComponent } from './main-page/pages/feedback/feedback.component';
+import { LocationComponent } from './main-page/pages/location/location.component';
+import { MenuComponent } from './main-page/pages/menu/menu.component';
+import { SoonComponent } from './main-page/pages/soon/soon.component';
+import { WelcomeComponent } from './main-page/pages/welcome/welcome.component';
+import { CountdownComponent } from './main-page/pages/countdown/countdown.component';
 
 /**
  * AoT requires an exported function for factories.
@@ -17,7 +23,18 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 }
 
 @NgModule({
-    declarations: [AppComponent, MainPageComponent, SectionComponent],
+    declarations: [
+        AppComponent,
+        MainPageComponent,
+        SectionComponent,
+        ApartmentsComponent,
+        FeedbackComponent,
+        LocationComponent,
+        MenuComponent,
+        SoonComponent,
+        WelcomeComponent,
+        CountdownComponent
+    ],
     imports: [
         BrowserModule,
         HttpClientModule,
@@ -29,14 +46,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
             }
         })
     ],
-    providers: [
-        LocalizationService,
-        {
-            provide: DateAdapter<Date>,
-            useClass: NativeDateAdapter,
-            deps: [MAT_DATE_LOCALE]
-        }
-    ],
+    providers: [LocalizationService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

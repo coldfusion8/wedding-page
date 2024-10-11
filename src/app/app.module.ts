@@ -14,6 +14,7 @@ import { MenuComponent } from './main-page/pages/menu/menu.component';
 import { SoonComponent } from './main-page/pages/soon/soon.component';
 import { WelcomeComponent } from './main-page/pages/welcome/welcome.component';
 import { CountdownComponent } from './main-page/pages/countdown/countdown.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 /**
  * AoT requires an exported function for factories.
@@ -36,6 +37,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
         CountdownComponent
     ],
     imports: [
+        ReactiveFormsModule,
         BrowserModule,
         HttpClientModule,
         TranslateModule.forRoot({

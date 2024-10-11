@@ -1,0 +1,24 @@
+#wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: url('../../../../assets/images/adelestamasjegyes-64.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    #header-wrapper {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > div {
+            font-size: 52px;
+            color: var(--font-color);
+        }
+    }
+}

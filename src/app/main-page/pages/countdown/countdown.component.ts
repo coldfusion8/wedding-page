@@ -15,8 +15,8 @@ export class CountdownComponent implements OnInit {
     }
 
     private getDayDifference(date1: Date, date2: Date): number {
-        const oneDay = 1000 * 60 * 60 * 24; // Milliseconds in one day
-        const timeDiff = Math.abs(date2.getTime() - date1.getTime()); // Difference in milliseconds
-        return Math.ceil(timeDiff / oneDay); // Difference in days
+        const oneDay = 1000 * 60 * 60 * 24;
+        const timeDiff = Math.abs(date2.getTime() - date1.getTime());
+        return Math.ceil(timeDiff / oneDay);
     }
 }

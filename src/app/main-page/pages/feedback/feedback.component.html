@@ -1,6 +1,21 @@
 <div id="wrapper">
     <div id="header-wrapper">
-        <div>hamarosan találkozunk!</div>
+        <div>Számíthatunk Rád az esküvőnkön?</div>
     </div>
-    <form></form>
+    <form [formGroup]="form">
+        <div id="container">
+            <mat-form-field>
+                <mat-label>Név</mat-label>
+                <input formControlName="name" matInput value="" />
+            </mat-form-field>
+            <mat-radio-group formControlName="participate">
+                <mat-radio-button value="1">Ott leszek</mat-radio-button>
+                <mat-radio-button value="0">Sajnos nem tudok ott lenni</mat-radio-button>
+            </mat-radio-group>
+            <div id="header">Étel intoleranica, preferencia Amennyiben nincs ilyened, kerünk hagyd üresen!</div>
+            <mat-checkbox formControlName="lactose">Laktóz-, illetve tejmentes</mat-checkbox>
+            <mat-checkbox formControlName="gluten">Gluténmentes</mat-checkbox>
+            <button (click)="sendFeedback()" mat-raised-button>Visszajelzés küldése</button>
+        </div>
+    </form>
 </div>

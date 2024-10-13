@@ -15,6 +15,13 @@ import { SoonComponent } from './main-page/pages/soon/soon.component';
 import { WelcomeComponent } from './main-page/pages/welcome/welcome.component';
 import { CountdownComponent } from './main-page/pages/countdown/countdown.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+
+const angularMaterialModules = [MatInputModule, MatRadioModule, MatCheckboxModule, MatButtonModule];
 
 /**
  * AoT requires an exported function for factories.
@@ -46,9 +53,10 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
-        })
+        }),
+        ...angularMaterialModules
     ],
-    providers: [LocalizationService],
+    providers: [LocalizationService, provideAnimationsAsync()],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

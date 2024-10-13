@@ -31,6 +31,14 @@ export class MainPageComponent implements OnInit, OnDestroy {
         this.touchStartY = event.touches[0].clientY;
     }
 
+    protected jumpToEnd(): void {
+        if (!this.sections) {
+            return;
+        }
+
+        this.scroll(this.sections.length - 1);
+    }
+
     private scroll(amount: number): void {
         if (!this.sections || this.scrollLock) {
             return;

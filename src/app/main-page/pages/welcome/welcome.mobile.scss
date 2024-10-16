@@ -1,0 +1,28 @@
+@media only screen and (max-width: 767px) {
+    :host #wrapper {
+        justify-content: flex-end;
+        background-image: url('../../../../assets/images/adelestamasjegyes-7-mobile.jpg');
+
+        #sider {
+            width: 40%;
+
+            #header-wrapper {
+                text-align: center;
+
+                #header {
+                    font-size: 50px;
+                }
+
+                #sub-header {
+                    font-size: 25px;
+                }
+            }
+
+            button {
+                width: 90%;
+                height: 50px;
+                font-size: 18px;
+            }
+        }
+    }
+}

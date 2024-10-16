@@ -1,0 +1,53 @@
+@media only screen and (max-width: 767px) {
+    #wrapper {
+        #header > div {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #body {
+            align-items: center;
+
+            #list {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .list-item {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    color: var(--font-color);
+                    text-align: center;
+
+                    .time,
+                    .subheader {
+                        font-size: 16px;
+                    }
+
+                    .subheader {
+                        margin-bottom: 40px;
+                    }
+
+                    .header {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            #image-wrapper {
+                width: 50%;
+                height: 80%;
+
+                #image {
+                    height: 70%;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

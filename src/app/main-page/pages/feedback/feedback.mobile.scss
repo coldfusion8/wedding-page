@@ -1,0 +1,41 @@
+@media only screen and (max-width: 767px) {
+    #wrapper {
+        height: 50%;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+
+        #header-wrapper > div {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        form {
+            position: absolute;
+            top: 100%;
+            background-color: var(--color-primary);
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+
+            #container {
+                width: 90%;
+                height: 90%;
+
+                mat-form-field {
+                    width: 80%;
+                }
+
+                mat-radio-group {
+                    margin-bottom: 16px;
+                }
+
+                button {
+                    margin-top: 16px;
+                    max-width: 40%;
+                }
+            }
+        }
+    }
+}

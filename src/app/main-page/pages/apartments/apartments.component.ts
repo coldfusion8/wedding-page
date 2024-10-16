@@ -3,6 +3,6 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-apartments',
     templateUrl: './apartments.component.html',
-    styleUrl: './apartments.component.scss'
+    styleUrls: ['./apartments.component.scss', './apartments.mobile.scss']
 })
 export class ApartmentsComponent {}

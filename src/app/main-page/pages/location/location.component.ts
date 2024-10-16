@@ -4,7 +4,7 @@ import { map, tileLayer, Map, marker, icon } from 'leaflet';
 @Component({
     selector: 'app-location',
     templateUrl: './location.component.html',
-    styleUrl: './location.component.scss'
+    styleUrls: ['./location.component.scss', './location.mobile.scss']
 })
 export class LocationComponent implements OnInit {
     private map?: Map;

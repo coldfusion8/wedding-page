@@ -77,6 +77,10 @@ export class MainPageComponent implements OnInit, OnDestroy {
     }
 
     private preventTouchScroll(event: TouchEvent): void {
+        if ((event.target as HTMLDivElement).getAttribute('id') === 'map') {
+            return;
+        }
+
         const touchEndY = event.touches[0].clientY; // Get Y position during touchmove
 
         if (touchEndY > this.touchStartY) {

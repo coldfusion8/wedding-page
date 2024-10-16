@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-countdown',
     templateUrl: './countdown.component.html',
-    styleUrl: './countdown.component.scss'
+    styleUrls: ['./countdown.component.scss', 'countdown.mobile.scss']
 })
 export class CountdownComponent implements OnInit {
     protected date = 0;

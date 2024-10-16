@@ -1,0 +1,26 @@
+@media only screen and (max-width: 767px) {
+    #wrapper {
+        flex-direction: column;
+
+        #side-info {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #text-box {
+                height: 80%;
+                width: 60%;
+
+                #header {
+                    font-size: 30px;
+                }
+
+                .item {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
